@@ -28,6 +28,14 @@ get_wireless_ip() { #For ethernet try en1
     echo "$ip_address"
 }
 
+disable_always_screen_on() {
+    adb shell settings put global stay_on_while_plugged_in 0
+}
+
+enable_always_screen_on() {
+    adb shell settings put global stay_on_while_plugged_in 3
+}
+
 set_http_proxy() {
     # Check if the adb command is available
     if ! command -v adb &> /dev/null; then
