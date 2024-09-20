@@ -1,5 +1,5 @@
 #!/bin/sh
-
+# This is a set of functions to improve dev exp
 launch_avd() {
     local avd_name="$1"
     nohup emulator -avd "$avd_name" -writable-system >/dev/null 2>&1 &
